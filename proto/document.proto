@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+// Get user information service
+service DocumentService {
+  rpc GetDocument(DocumentRequest) returns (Document) {}
+}
+
+// Request user information
+message DocumentRequest { int64 id = 1; }
+
+// The user information object
+message Document { string name = 1; }
